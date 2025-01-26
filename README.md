@@ -10,10 +10,11 @@ Salon Booking Online Application is for booking salon service with prefered sche
 6. Then run `php artisan migrate --seed` to run migration and seeder
 7. Then run `php artisan storage:link` to link storage and public folder
 8. Then run the app using `php artisan serve`
+
 NOTE: Data Locations, Treatments, Therapist, Users already exist in database seeder.
 
-Default User:
-email: test@gmail.com
+Default User:<br/>
+email: test@gmail.com<br/>
 password: password
 
 ### API Endpoints
