@@ -77,7 +77,7 @@ class AppointmentController extends Controller
 
             $total_price = $treatment_price + $therapist_fee;
 
-            Appointment::create([
+            $id = Appointment::create([
                 'location_id' => $request->location_id,
                 'name' => $request->name,
                 'email' => $request->email,
@@ -88,7 +88,7 @@ class AppointmentController extends Controller
                 'total_price' => $total_price
             ]);
 
-            $data = $request->all();
+            $data = $id;
             return $this->sendResponse($data, "Succesfully saved booking appointment");
         } catch (Exception $e) {
             return $this->sendError('Internal Error.', ['error' => $e->getMessage()]);
