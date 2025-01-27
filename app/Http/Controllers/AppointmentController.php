@@ -27,7 +27,7 @@ class AppointmentController extends Controller
 
             $data = false;
             $message = 'Appointment already taken';
-            if ($todayAppointment != null) {
+            if ($todayAppointment == null) {
                 $data = true;
                 $message = 'Appointment available';
             }
