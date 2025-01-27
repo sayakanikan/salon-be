@@ -106,11 +106,13 @@ class AppointmentController extends Controller
                 if ($treatment!= null) {
                     $item->treatment_category = $treatment->category->name;
                     $item->treatment_name = $treatment->name;
+                    $item->treatment_price = $treatment->price;
                 }
 
                 $therapist = Therapist::where('id', $item->therapist_id)->first();
                 if ($therapist!= null) {
                     $item->therapist_name = $therapist->name;
+                    $item->therapist_price = $therapist->fee;
                 }
             }
 
